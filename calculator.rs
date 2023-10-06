@@ -4,6 +4,8 @@ fn main() {
     println!("Welcome to the Rust Calculator!");
     println!("Available operations: +, -, *, /");
 
+    let mut account_balance: f64 = 0.0; // Initialize the account balance to 0.0
+
     loop {
         println!("Enter an operation symbol or 'q' to quit:");
 
@@ -63,6 +65,9 @@ fn main() {
             }
         };
 
+        account_balance += result; // Update the account balance with the result
+
         println!("Result: {}", result);
+        println!("Account Balance: {}", account_balance);
     }
 }
